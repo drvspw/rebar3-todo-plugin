@@ -14,7 +14,7 @@ Use
 Add the plugin to your rebar config:
 
     {plugins, [
-        { todo, ".*", {git, "git@host:user/todo.git", {tag, "0.1.0"}}}
+        { todo, ".*", {git, "https://github.com/drvspw/rebar3-todo-plugin.git", {tag, "0.1.0"}}}
     ]}.
 
 Then just call your plugin directly in an existing application:
@@ -26,3 +26,4 @@ Then just call your plugin directly in an existing application:
     <Plugin Output>
 
 Blindly copied from rebar3 todo plugin tutorial
+================================================
