@@ -60,8 +60,8 @@ check_todo_mod(ModPath, Matches) ->
 find_todo_lines(File) ->
     rebar_api:info("IN ~p:todo_lines()", [?MODULE]),
     case re:run(File, "%+.*(TODO:.*)", [{capture, all_but_first, binary}, global, caseless]) of
-        {match, DeepBins} ->     rebar_api:info("TODO found"), lists:flatten(DeepBins);
-        nomatch ->     rebar_api:info("NO TODO's"), []
+        {match, DeepBins} -> lists:flatten(DeepBins);
+        nomatch ->  []
     end.
 
 display_todos(App, []) -> 
