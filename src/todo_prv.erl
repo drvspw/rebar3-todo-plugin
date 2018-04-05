@@ -57,8 +57,9 @@ find_todo_lines(File) ->
         nomatch -> []
     end.
 
-display_todos(_, []) -> ok;
-    io:format("Application ~s~nHas no TODO's~n",[App]),
+display_todos(App, []) -> 
+    io:format("Application ~s~nHas no TODOs~n",[App]),
+    ok;
 display_todos(App, FileMatches) ->
     io:format("Application ~s~n",[App]),
     [begin
