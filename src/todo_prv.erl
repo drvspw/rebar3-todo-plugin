@@ -64,6 +64,6 @@ display_todos(App, FileMatches) ->
     rebar_api:info("Application ~s",[App]),
     [begin
       rebar_api:info("\t~s",[Mod]),
-      [rebar_api:warning("\t  ~s",[TODO]) || TODO <- TODOs]
+      [rebar_api:warn("\t  ~s",[TODO]) || TODO <- TODOs]
      end || {Mod, TODOs} <- FileMatches],
     ok.
